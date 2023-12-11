@@ -10,7 +10,7 @@ import java.util.Properties;
 public class DB {
   private static Connection con = null;
 
-  public static Connection geConnection() {
+  public static Connection getConnection() {
     if (con == null) {
       try {
         Properties props = loadProperties();
