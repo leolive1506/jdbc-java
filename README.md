@@ -33,3 +33,27 @@ SELECT * FROM product WHERE inner join category cat on product.category_id = cat
   - move para proximo
 - absolute 
   - move para posiçã informada, lembrando que os dados reais começam em 1
+
+```java
+Connection conn = null;
+Statement st = null;
+ResultSet rs = null;
+
+try {
+  conn = DB.getConnection();
+  st = conn.createStatement();
+  rs = st.executeQuery("select * from department");
+  
+  while (rs.next()) {
+    System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));
+  }
+}
+```
+# Inserir dados
+## PreparedStatement
+- montar consulta sql 
+
+## executeUpdate
+## Statement.RETURN_GENERATED_KEYS
+- recuperar id do obj inserido
+## getGeneratedKeys
