@@ -106,3 +106,11 @@ try {
   - commitar transação
 - rollback()
   - desfazer transação
+
+# DAO (Data access object)
+- pra cada entidade tem um obj responsável por fazer acesso a dados relacionado a essa entidade
+  - ClienteDao
+  - ProdutoDao
+- Cada DAO será definido por uma interface
+- A injeção de depencia pode ser feita por meio do padrão Factory
+  - responsavel por instanciar implementações do DAO
