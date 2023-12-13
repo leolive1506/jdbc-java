@@ -19,7 +19,7 @@ SELECT * FROM product, category WHERE product.category_id = category.id
 SELECT * FROM product WHERE inner join category cat on product.category_id = cat.id
 ```
 - Baixar connector java
-
+  - é extraido para /usr/share/java
 # Buscar dados
 ## Statement
 - montar comando sql a ser executado
@@ -90,4 +90,19 @@ try {
 }
 ```
 
-# Atualizar dados
+# Transação
+- op que tem que manter consistencia do db
+- tem que ser
+  1. Atomica
+  2. consistente
+  3. isolada
+  4. Durável
+- ou acontece tudo ou não acontece nada
+
+- setAutoCommit(false)
+  - cada operação isolada deve ser confirmada automáticamente
+  - colocar como false, cada transação n ta confirmada, somente quando confirmar que fecha a transação
+- commit()
+  - commitar transação
+- rollback()
+  - desfazer transação
